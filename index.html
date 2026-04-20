@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antik Museum</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <form>
+      <label for="category-select">Vælg periode</label>
+      <select id="category-select">
+        <option value="alle">Alle</option>
+        <option value="oldtid">Oldtid</option>
+        <option value="vikingetid">Vikingetid</option>
+        <option value="antikken">Antikken</option>
+        <option value="bronzealder">Bronzealderen</option>
+        <option value="jernalder">Jernalderen</option>
+      </select>
+
+      <label for="gsearch">Søg</label>
+      <input type="search" name="gsearch" id="gsearch" />
+      <input type="submit" value="Søg" />
+    </form>
+
+    <section id="exhibition-container"></section>
+
+    <script src="js/antik-museum-script.js"></script>
+  </body>
+</html>
