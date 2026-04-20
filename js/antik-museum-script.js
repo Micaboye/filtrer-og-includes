@@ -164,7 +164,7 @@ const exhibitionContainer = document.querySelector("#exhibition-container");
 
 // Henter de html, vi skal arbejde med og gemmer dem i nogle variabler
 const selectedCategory = document.querySelector("#category-select");
-const searchInput = document.querySelector("#search-input");
+const searchInput = document.querySelector("#gsearch");
 const form = document.querySelector("form");
 
 function filterExhibitions() {
@@ -172,7 +172,7 @@ function filterExhibitions() {
   const selectedValue = selectedCategory.value;
 
   // Henter søgeteksten fra søgefeltet og laver indholdet om til små bogstaver og fjerner mellemrum før og efter søgeteksten
-  const searchTerm = searchInput.value.toLowercase().trim();
+  const searchTerm = searchInput.value.toLowerCase().trim();
 
   // Vi starter med alle udstillnger fra listen (array "exhibitions")
   let filteredExhibitions = exhibitions;
