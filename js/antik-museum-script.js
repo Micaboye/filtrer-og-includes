@@ -184,10 +184,26 @@ function filterExhibitions() {
       return item.periode === selectedValue;
     });
   }
+
+  if (searchTerm != "") {
+    filteredExhibitions = filteredExhibitions.filter((item) => {
+      return item.udstillingsnavn.toLowerCase().includes(searchTerm);
+    });
+  }
+
   displayExhibitions(filteredExhibitions);
 }
 
+// Sætter en addEventListener på variablen selectedCategory (dropdown menu) som lytter på om værdien ændrer sig
 selectedCategory.addEventListener("change", filterExhibitions);
+
+// Sætter en addEventListener på variablen searchInput (søgefelt) som lytter på når der sker ændringer i søgefeltet
+searchInput.addEventListener("input", filterExhibitions);
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  filterExhibitions();
+});
 
 /*
 Her opretter jeg en funktion, som skal vise udstillingerne i browseren.
